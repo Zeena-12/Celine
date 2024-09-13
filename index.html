@@ -5,108 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       body {
-  font-family: Arial, sans-serif;
-  /* font-family: "Trebuchet MS", sans-serif; */
-  padding: 0px;
-  margin: 0px;
+        background-color: #f5efec;
+        font-family: Arial, sans-serif;
+        /* font-family: "Trebuchet MS", sans-serif; */
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .navbar {
+        background-color: transparent;
+        height: 40px;
+        width: 100%;
+        position: fixed;
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+  align-items: center;
+  justify-content: space-between;
+      }
+      .navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.welcome{
-    background-color: #6F4E37;
-    height: 40px;
-    width: 100%;
-    color: white;
-    text-align: center; 
-    line-height: 40px; 
-}
-
-.header{
-    text-align: center; 
-    line-height: 40px; 
-    font-size: 30px;
-    p{
-      margin: 0px;
-      font-family: Arial, sans-serif;
-      margin-top:10px;
-    }
-    .motivation{
-      font-size: 15px;
-    }
-}
-
-.cards {
-  padding: 15px;
+/* Menu (right) */
+.navbar .menu {
   display: flex;
-  /* flex-direction: row; */
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 20px; /* Space between the menu items */
 }
 
-.card {
-  display: flex;
-  flex: 1 1 calc(47% - 10px);
-  align-items: start;
-  flex-direction: column;
-  gap: 10px;
-  
-  .image {
-    width: 180px;
-    height: 240px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the box while maintaining its aspect ratio */
-    object-position: center; /* Centers the image within the box */
-}
-
-
-  p {
-    margin: 0px;
-  }
-  .price{
-
-  }
-}
-
-.footer {
-  background-color: #ebebeb;
-  min-height: 50px;
-  width: 100%;
+.navbar .menu a {
   color: white;
-  text-align: center; 
-  line-height: 40px;
-  position: fixed; 
-  bottom: 0;
-  left: 0;
-  display: flex; /* Add flexbox to the footer */
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
+  text-decoration: none;
+  font-size: 16px;
 }
 
-.footer .links {
-  display: flex;
-  justify-content: center; 
-  gap: 10px;
+.navbar .menu a:hover {
+  text-decoration: underline; /* Optional: Add a hover effect */
 }
 
-.footer .links img {
-  width: 24px;
-  height: 24px;
-}
+      .header {
+        text-align: center;
+        line-height: 40px;
+        font-size: 30px;
+        z-index: 1;
+        background-image: url("header.jpg"); /* Replace with your image URL */
+        background-size: 150%; /* Zooms in the image (increase percentage to zoom more) */
+        background-repeat: no-repeat;
+        position: relative;
 
+        /* Size settings for mobile full-screen effect */
+        width: 100vw; /* Full viewport width */
+        height: 50vh;
 
+        /* Optional: Text color and style for better visibility */
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          margin: 0px;
+          font-family: Arial, sans-serif;
+          margin-top: 10px;
+        }
+        .motivation {
+          font-size: 15px;
+        }
+        .title {
+          font-size: 50px;
+        }
+      }
+
+      .cards {
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: space-between; /* This will ensure the cards are spaced evenly */
+      }
+
+      .card {
+        flex: 0 0 calc(50% - 10px); /* Ensures two cards per row, taking 50% width minus gap */
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 10px;
+
+        .image {
+          width: 100%; /* Make the image take the full width of the card */
+          height: 240px;
+          border-radius: 10px;
+          overflow: hidden;
+        }
+        .image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        p {
+          margin: 0px;
+        }
+        .price {
+        }
+      }
+
+      .footer {
+        background-color: #ebebeb;
+        min-height: 50px;
+        width: 100%;
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex; /* Add flexbox to the footer */
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+      }
+
+      .footer .links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .footer .links img {
+        width: 24px;
+        height: 24px;
+      }
     </style>
     <title>Document</title>
   </head>
   <body>
     <div class="container">
-      <div class="welcome">Welcome to Celine Pottery</div>
+      <div class="navbar">
+        <div class="logo">Celine</div>
+        <div class="menu">
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+      </div>
       <div class="header">
-        <p class="title">Celine</p>
-        <p class="motivation">مِن تقاليد الماضي إلى رُوح الإِبداع الحديث</p>
+        <div>
+          <p class="title">Craft the Art</p>
+          <p class="motivation">مِن تقاليد الماضي إلى رُوح الإِبداع الحديث</p>
+        </div>
       </div>
       <div class="content">
         <div class="cards">
@@ -137,6 +188,24 @@
             <div class="description">
               <p>Kids classes</p>
             </div>
+            <div class="price">BHD 24</div>
+          </div>
+          <div class="card">
+            <div class="image">
+              <img src="card4.jpg" alt="" />
+            </div>
+            <div class="description">
+              <p>Painting on Pottery</p>
+            </div>
+            <div class="price">price on selection</div>
+          </div>
+          <div class="card">
+            <div class="image">
+              <img src="card4.jpg" alt="" />
+            </div>
+            <div class="description">
+              <p>Mug making</p>
+            </div>
             <div class="price">BHD 25</div>
           </div>
           <div class="card">
@@ -144,23 +213,21 @@
               <img src="card4.jpg" alt="" />
             </div>
             <div class="description">
-              <p>Painting on ready made piece</p>
+              <p>Private workship</p>
             </div>
-            <div class="price">BHD 10</div>
+            <div class="price">price on selection</div>
           </div>
         </div>
 
-        <div class="galary">
-          
+        <div class="galary"></div>
+      </div>
+      <div class="footer">
+        <div class="links">
+          <img src="instagram.svg" alt="Instagram" />
+          <img src="location.svg" alt="Location" />
+          <img src="whatsapp.svg" alt="Location" />
         </div>
       </div>
-<div class="footer">
-    <div class="links">
-        <img src="instagram.svg" alt="Instagram">
-        <img src="location.svg" alt="Location">
-        <img src="whatsapp.svg" alt="Location">
-    </div>
-</div>
     </div>
   </body>
 </html>
