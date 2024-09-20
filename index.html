@@ -13,40 +13,57 @@
       }
 
       .navbar {
-        background-color: transparent;
-        height: 40px;
-        width: 100%;
-        position: fixed;
-        color: white;
-        text-align: center;
-        line-height: 40px;
-        top: 0;
-        left: 0;
-        z-index: 10;
-        display: flex;
-  align-items: center;
-  justify-content: space-between;
-      }
+    background-color: transparent; /* Initial background color */
+    width: 100%;
+    position: fixed;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 0.4s ease; /* Smooth transition for background color */
+    align-items: center;
+}
+
+.navbar.scrolled {
+    background-color: rgb(78, 47, 30);
+}
+
+
       .navbar .logo {
-  font-size: 24px;
-  font-weight: bold;
-}
+        width:150px;
+        height: 60px;
+        display: flex;
 
-/* Menu (right) */
-.navbar .menu {
-  display: flex;
-  gap: 20px; /* Space between the menu items */
-}
+        overflow: hidden; /* Ensures that zoomed parts are hidden */
+    position: relative;
+      }
+      .navbar img{
+        width: 100%;
+    height: 100%;
+    transform: scale(0.9); /* Zoom the image by 1.5 times */
+    transition: transform 0.3s ease; /* Smooth transition */
+    object-fit: cover; 
+        margin-top: 5px;
+      }
 
-.navbar .menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
+      /* Menu (right) */
+      .navbar .menu {
+        display: flex;
+        gap: 20px; /* Space between the menu items */
+        margin-right: 10px;
+      }
 
-.navbar .menu a:hover {
-  text-decoration: underline; /* Optional: Add a hover effect */
-}
+      .navbar .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      .navbar .menu a:hover {
+        text-decoration: underline; /* Optional: Add a hover effect */
+      }
 
       .header {
         text-align: center;
@@ -99,7 +116,7 @@
         .image {
           width: 100%; /* Make the image take the full width of the card */
           height: 240px;
-          border-radius: 10px;
+          /* border-radius: 10px; */
           overflow: hidden;
         }
         .image img {
@@ -111,8 +128,11 @@
 
         p {
           margin: 0px;
+          color: #947979;
         }
         .price {
+          color: #947979;
+          font-weight: bolder;
         }
       }
 
@@ -141,16 +161,56 @@
         width: 24px;
         height: 24px;
       }
+      .slider-container-outer{
+
+        margin: 50px 0px 50px 0px;
+
+        .title {
+          margin-left: 10px;
+        font-weight: bolder;
+        font-size: 20px;
+        }
+        .link{
+          text-align: center;
+          text-decoration: underline;
+        }
+      }
+      /* slider */
+      .slider-container {
+        width: 100%;
+        overflow-x: auto; /* Allow horizontal scrolling */
+        display: flex;
+        justify-content: center;
+
+      }
+
+      .slider {
+        display: flex;
+        gap: 10px; /* Add space between images */
+        scroll-snap-type: x mandatory; /* Enable snap scrolling */
+      }
+
+      .slider img {
+        flex-shrink: 0; /* Prevent images from shrinking */
+        width: 30%; /* Each image takes up roughly one third of the container */
+        object-fit: cover; /* Ensure image covers the area */
+        scroll-snap-align: center; /* Snap the image to the center while scrolling */
+   
+        width: 30%; /* Each image takes up roughly one-third of the container */
+        aspect-ratio: 1 / 1;
+      }
     </style>
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <div class="navbar">
-        <div class="logo">Celine</div>
+        <div class="logo">
+          <img src="celine.svg">
+        </div>
         <div class="menu">
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
+          <a href="#contact">CONTACT</a>
+          <a href="#about">ABOUT</a>
         </div>
       </div>
       <div class="header">
@@ -160,6 +220,22 @@
         </div>
       </div>
       <div class="content">
+        <!-- start silder -->
+
+        <div class="slider-container-outer">
+          <p class="title">Membership</p>
+          <div class="slider-container">
+            <div class="slider">
+              <img src="card1.jpg" alt="Image 1" />
+              <img src="card1.jpg" alt="Image 2" />
+              <img src="card1.jpg" alt="Image 3" />
+              <img src="card1.jpg" alt="Image 4" />
+              <img src="card1.jpg" alt="Image 5" />
+            </div>
+          </div>
+          <p class="link">Details</p>
+        </div>
+        <!-- end silder -->
         <div class="cards">
           <div class="card">
             <div class="image">
@@ -229,5 +305,16 @@
         </div>
       </div>
     </div>
+    <script>
+      window.addEventListener('scroll', function() {
+          const navbar = document.querySelector('.navbar');
+          if (window.scrollY > 0) {
+              navbar.classList.add('scrolled');
+          } else {
+              navbar.classList.remove('scrolled');
+          }
+      });
+  </script>
+  
   </body>
 </html>
