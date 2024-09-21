@@ -15,17 +15,17 @@
 
       .navbar {
         background-color: rgb(170, 156, 149);
-    width: 100%;
+        width: 100%;
 
-    color: white;
-    text-align: center;
-    line-height: 40px;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    transition: background-color 0.4s ease;
-    align-items: center;
-    top: 0;
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        transition: background-color 0.4s ease;
+        align-items: center;
+        top: 0;
       }
 
       .navbar .logo {
@@ -61,6 +61,7 @@
       .navbar .menu a:hover {
         text-decoration: underline; /* Optional: Add a hover effect */
       }
+
       .slider-container-outer {
         margin: 50px 0px 50px 0px;
 
@@ -69,6 +70,9 @@
           font-weight: bolder;
           font-size: 20px;
           text-align: center;
+          color: rgb(0, 0, 0);
+          font-family: initial;
+
         }
         .link {
           text-align: center;
@@ -98,6 +102,82 @@
           aspect-ratio: 1 / 1;
         }
       }
+      .details {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 500px;
+        margin: 0 auto;
+        font-family: "Arial", sans-serif;
+      }
+
+      .price {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+        background-color: white;
+        padding: 10px;
+        border-radius: 8px;
+        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+        font-family: initial;
+
+      }
+
+      .time {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: white;
+        border-radius: 8px;
+        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+        font-family: initial;
+
+      }
+
+      .time p {
+        margin: 0;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .description {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #555;
+      }
+
+      .description p {
+        margin: 0;
+      }
+
+      .description {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+        font-family: initial;
+        line-height: 30px;
+        font-family: initial;
+
+      }
+      .dm-btn {
+  padding: 10px 0;
+  color: #947979;
+  border: #947979 solid 1px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  background-color: transparent;
+  font-family: initial;
+
+}
+
     </style>
   </head>
   <body>
@@ -113,17 +193,32 @@
       </div>
       <div class="content">
         <div class="slider-container-outer">
-            <p class="title">Mug Making</p>
-            <div class="slider-container">
-              <div class="slider">
-                <img src="card1.jpg" alt="Image 1" />
-                <img src="card1.jpg" alt="Image 2" />
-                <img src="card1.jpg" alt="Image 3" />
-                <img src="card1.jpg" alt="Image 4" />
-                <img src="card1.jpg" alt="Image 5" />
-              </div>
+          <p class="title">Mug Making</p>
+          <div class="slider-container">
+            <div class="slider">
+              <img src="card1.jpg" alt="Image 1" />
+              <img src="card1.jpg" alt="Image 2" />
+              <img src="card1.jpg" alt="Image 3" />
+              <img src="card1.jpg" alt="Image 4" />
+              <img src="card1.jpg" alt="Image 5" />
             </div>
           </div>
+        </div>
+        <div class="details">
+          <div class="price">BHD 25,000 (1 mug)</div>
+          <div class="time">
+            <p>Duration</p>
+            <p>1 hr & 30 min</p>
+          </div>
+          <div class="description">
+            <p>
+              A beginner's class to make your own hand-built mug using the
+              "pinch" or "slab" technique, without a pottery wheel. Let the mug
+              dry, and return after 2 weeks for a glazing session (coloring).
+            </p>
+          </div>
+          <button class="dm-btn">DM for booking</button>
+        </div>
       </div>
     </div>
   </body>
