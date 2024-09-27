@@ -2,6 +2,20 @@
   {
     "images": [
       "card1_1.jpg",
+      "card5_2.jpg",
+      "card5_3.jpg",
+      "card5_4.jpg",
+      "card5_5.jpg"
+    ],
+    "title": "Hand-Build",
+    "price": "30 BD",
+    "packages": ["1 - 2 Pice"],
+    "description": "beginner-friendly workshop where you'll be introduced to the art of pottery hand building. Learn various techniques (pinch, coil & slab) to create your pottery piece. Let your pieces dry & then return after 2 weeks for glazing them (coloring)",
+    "duration": "2 hr"
+  },
+  {
+    "images": [
+      "card1_1.jpg",
       "card1_1.jpg",
       "card1_1.jpg",
       "card1_1.jpg",
@@ -37,7 +51,7 @@
       "card3_4.jpg",
       "card3_5.jpg"
     ],
-    "title": "Kids - Classs",
+    "title": "Kids - Class",
     "description": "engaging and educational workshop designed for children to introduce young participants to the basics of hand building in a fun and interactive way. Let your pieces dry & then return after 2 weeks for glazing them (coloring) (1-2 piece)",
     "price": "BHD 24",
     "duration": "1 hr & 30 min",
@@ -75,20 +89,6 @@
     "include": ["all material glazing , firing , drinks & snacks", "booking before week"],
     "duration": "2 hr",
     "age": "Any"
-  },
-  {
-    "images": [
-      "card1_1.jpg",
-      "card5_2.jpg",
-      "card5_3.jpg",
-      "card5_4.jpg",
-      "card5_5.jpg"
-    ],
-    "title": "Hand Build",
-    "price": "30 BD",
-    "packages": ["1 - 2 Pice"],
-    "description": "beginner-friendly workshop where you'll be introduced to the art of pottery hand building. Learn various techniques (pinch, coil & slab) to create your pottery piece. Let your pieces dry & then return after 2 weeks for glazing them (coloring)",
-    "duration": "2 hr"
   }
 
 ]
