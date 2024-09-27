@@ -2,10 +2,12 @@
   {
     "images": [
       "card1_1.jpg",
-      "card5_2.jpg",
-      "card5_3.jpg",
-      "card5_4.jpg",
-      "card5_5.jpg"
+      "card1_2.jpg",
+      "card1_3.jpg",
+      "card1_4.jpg",
+      "card1_5.jpg",
+      "card1_6.jpg",
+      "card1_7.jpg"
     ],
     "title": "Hand-Build",
     "price": "30 BD",
@@ -15,11 +17,11 @@
   },
   {
     "images": [
-      "card1_1.jpg",
-      "card1_1.jpg",
-      "card1_1.jpg",
-      "card1_1.jpg",
-      "card1_1.jpg"
+      "card2_1.jpg",
+      "card2_2.jpg",
+      "card2_3.jpg",
+      "card2_4.jpg",
+      "card2_5.jpg"
     ],
     "title": "mug making",
     "description": "A beginners class to make your own hand-build mug Using the 'Pinch' or 'slab' technique, without a pottery wheel. Let your mug dry & then return after 2 weeks for glazing session (coloring)",
@@ -30,11 +32,10 @@
 
   {
     "images": [
-      "card2_1.jpg",
-      "card2_2.jpg",
-      "card2_3.jpg",
-      "card2_4.jpg",
-      "card2_5.jpg"
+      "card3_1.jpg",
+      "card3_2.jpg",
+      "card3_3.jpg",
+      "card3_4.jpg"
     ],
     "title": "Wheel Workshop",
     "description": "beginner-friendly wheel workshop focuses on teaching you the basic techniques for working with clay on a pottery wheel. Let your pieces dry & then return after 2 weeks for glazing them (coloring).",
@@ -45,11 +46,11 @@
 
   {
     "images": [
-      "card3_1.jpg",
-      "card3_2.jpg",
-      "card3_3.jpg",
-      "card3_4.jpg",
-      "card3_5.jpg"
+      "card4_1.jpg",
+      "card4_2.jpg",
+      "card4_3.jpg",
+      "card4_4.jpg",
+      "card4_5.jpg"
     ],
     "title": "Kids - Class",
     "description": "engaging and educational workshop designed for children to introduce young participants to the basics of hand building in a fun and interactive way. Let your pieces dry & then return after 2 weeks for glazing them (coloring) (1-2 piece)",
@@ -60,11 +61,11 @@
 
   {
     "images": [
-      "card1_1.jpg",
-      "card4_2.jpg",
-      "card4_3.jpg",
-      "card4_4.jpg",
-      "card4_5.jpg"
+      "card5_1.jpg",
+      "card5_2.jpg",
+      "card5_3.jpg",
+      "card5_4.jpg",
+      "card5_5.jpg"
     ],
     "title": "Painting  - class",
     "description": "unlock your inner artist, express you creativity as you paint your own pottery piece, where you can choose any ready-made pottery piece (vas, jar, tray,mubkhar,etc) and let your inspiration flow.",
@@ -76,11 +77,8 @@
 
   {
     "images": [
-      "card1_1.jpg",
-      "card5_2.jpg",
-      "card5_3.jpg",
-      "card5_4.jpg",
-      "card5_5.jpg"
+      "card6_1.jpg",
+      "card6_2.jpg"
     ],
     "title": "Private Workshop Package",
     "price": "Price on selection",
