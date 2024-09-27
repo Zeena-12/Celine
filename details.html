@@ -94,11 +94,9 @@
 
         .slider img {
           flex-shrink: 0; /* Prevent images from shrinking */
-          width: 30%; /* Each image takes up roughly one third of the container */
           object-fit: cover; /* Ensure image covers the area */
           scroll-snap-align: center; /* Snap the image to the center while scrolling */
-
-          width: 60%; /* Each image takes up roughly one-third of the container */
+          width: 60%; 
           aspect-ratio: 1 / 1;
         }
       }
@@ -193,33 +191,75 @@
       </div>
       <div class="content">
         <div class="slider-container-outer">
-          <p class="title">Mug Making</p>
+          <p class="title" id="itemTitle"></p>
           <div class="slider-container">
-            <div class="slider">
-              <img src="card1.jpg" alt="Image 1" />
-              <img src="card1.jpg" alt="Image 2" />
-              <img src="card1.jpg" alt="Image 3" />
-              <img src="card1.jpg" alt="Image 4" />
-              <img src="card1.jpg" alt="Image 5" />
-            </div>
+            <div class="slider" id="slider"></div>
           </div>
         </div>
         <div class="details">
-          <div class="price">BHD 25,000 (1 mug)</div>
+          <div class="price" id="itemPrice"></div>
           <div class="time">
             <p>Duration</p>
-            <p>1 hr & 30 min</p>
+            <p id="itemDuration"></p>
           </div>
           <div class="description">
-            <p>
-              A beginner's class to make your own hand-built mug using the
-              "pinch" or "slab" technique, without a pottery wheel. Let the mug
-              dry, and return after 2 weeks for a glazing session (coloring).
-            </p>
+            <p id="itemDescription"></p>
           </div>
+          <ul id="packageList"></ul>
           <button class="dm-btn">DM for booking</button>
         </div>
       </div>
     </div>
-  </body>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const itemIndex = params.get('item');
+  
+      fetch('data.json')
+          .then(response => response.json())
+          .then(data => {
+              const selectedCard = data[itemIndex];
+  
+              // Set the title and other details, only if they exist
+              if (selectedCard.title) {
+                  document.getElementById('itemTitle').innerText = selectedCard.title;
+              }
+              if (selectedCard.price) {
+                  document.getElementById('itemPrice').innerText = selectedCard.price;
+              }
+              if (selectedCard.duration) {
+                  document.getElementById('itemDuration').innerText = selectedCard.duration;
+              }
+              if (selectedCard.description) {
+                  document.getElementById('itemDescription').innerText = selectedCard.description;
+              }
+  
+              // Handle packages if they exist
+              const packageList = document.getElementById('packageList');
+              if (selectedCard.packages && selectedCard.packages.length > 0) {
+                  selectedCard.packages.forEach(pkg => {
+                      const packageItem = document.createElement('li');
+                      packageItem.innerText = pkg;
+                      packageList.appendChild(packageItem);
+                  });
+              }
+  
+              // Set the images in the slider
+              const slider = document.getElementById('slider');
+              selectedCard.images.forEach(image => {
+                  const imgElement = document.createElement('img');
+                  imgElement.src = image;
+                  imgElement.alt = selectedCard.title;
+                  // imgElement.style.width = '100%'; // Adjust as necessary
+                  slider.appendChild(imgElement);
+              });
+          });
+  
+      function goBack() {
+          window.history.back();
+      }
+  </script>
+  
+  
+</body>
 </html>

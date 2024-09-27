@@ -227,74 +227,47 @@
           <p class="title">Membership</p>
           <div class="slider-container">
             <div class="slider">
-              <img src="card1.jpg" alt="Image 1" />
-              <img src="card1.jpg" alt="Image 2" />
-              <img src="card1.jpg" alt="Image 3" />
-              <img src="card1.jpg" alt="Image 4" />
-              <img src="card1.jpg" alt="Image 5" />
+              <img src="card1_1.jpg" alt="Image 1" />
+              <img src="card1_1.jpg" alt="Image 2" />
+              <img src="card1_1.jpg" alt="Image 3" />
+              <img src="card1_1.jpg" alt="Image 4" />
+              <img src="card1_1.jpg" alt="Image 5" />
             </div>
           </div>
           <p class="link">Details</p>
         </div>
         <!-- end silder -->
-        <div class="cards">
-          <div class="card">
-            <div class="image">
-              <a href="details1.html">
-                <img src="card1.jpg" alt="Card Image" />
-              </a>
-            </div>
-            <div class="description">
-              <p>Hand Building</p>
-            </div>
-            <div class="price">BHD 28</div>
-          </div>
-          <div class="card">
-            <div class="image">
-              <img src="card2.jpg" alt="" />
-            </div>
-            <div class="description">
-              <p>Wheel workshop</p>
-            </div>
-            <div class="price">BHD 35</div>
-          </div>
-          <div class="card">
-            <div class="image">
-              <img src="card3.jpg" alt="" />
-            </div>
-            <div class="description">
-              <p>Kids classes</p>
-            </div>
-            <div class="price">BHD 24</div>
-          </div>
-          <div class="card">
-            <div class="image">
-              <img src="card4.jpg" alt="" />
-            </div>
-            <div class="description">
-              <p>Painting on Pottery</p>
-            </div>
-            <div class="price">price on selection</div>
-          </div>
-          <div class="card">
-            <div class="image">
-              <img src="card4.jpg" alt="" />
-            </div>
-            <div class="description">
-              <p>Mug making</p>
-            </div>
-            <div class="price">BHD 25</div>
-          </div>
-          <div class="card">
-            <div class="image">
-              <img src="card4.jpg" alt="" />
-            </div>
-            <div class="description">
-              <p>Private workship</p>
-            </div>
-            <div class="price">price on selection</div>
-          </div>
-        </div>
+        <div class="cards" id="cardContainer"></div>
+
+        <script>
+          fetch('data.json')
+              .then(response => response.json())
+              .then(data => {
+                  const cardContainer = document.getElementById('cardContainer');
+      
+                  data.forEach((card, index) => {
+                      const cardElement = document.createElement('div');
+                      cardElement.classList.add('card');
+                      cardElement.innerHTML = `
+                          <div class="image">
+                              <img src="${card.images[0]}" alt="${card.title}" />
+                          </div>
+                          <div class="description">
+                              <p>${card.title}</p>
+                          </div>
+                          <div class="price">${card.price}</div>
+                      `;
+      
+                      // Redirect to details page with index
+                      cardElement.onclick = () => {
+                          window.location.href = `details.html?item=${index}`;
+                      };
+                      
+                      cardContainer.appendChild(cardElement);
+                  });
+              });
+      </script>
+        
 
         <div class="galary"></div>
       </div>

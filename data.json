@@ -1,0 +1,80 @@
+[
+  {
+    "images": [
+      "card1_1.jpg",
+      "card1_1.jpg",
+      "card1_1.jpg",
+      "card1_1.jpg",
+      "card1_1.jpg"
+    ],
+    "title": "Membership",
+    "description": "Become a part of the our Community and unlock a world of creativity. As a member, you'll have the opportunity to learn, discover, and share your passion..",
+    "packages": ["1 month: 160 BD", "2 month: 300 BD", "3 month: 400 BD"],
+    "price": "BHD 28",
+    "duration": "1 hr & 30 min",
+    "age": "12-16"
+  },
+
+  {
+    "images": [
+      "card2_1.jpg",
+      "card2_2.jpg",
+      "card2_3.jpg",
+      "card2_4.jpg",
+      "card2_5.jpg"
+    ],
+    "title": "Wheel Workshop",
+    "description": "beginner-friendly wheel workshop focuses on teaching you the basic techniques for working with clay on a pottery wheel. Let your pieces dry & then return after 2 weeks for glazing them (coloring).",
+    "price": "BHD 35",
+    "duration": "2 hr",
+    "age": "Any"
+  },
+
+  {
+    "images": [
+      "card3_1.jpg",
+      "card3_2.jpg",
+      "card3_3.jpg",
+      "card3_4.jpg",
+      "card3_5.jpg"
+    ],
+    "title": "Kids - Classs",
+    "description": "engaging and educational workshop designed for children to introduce young participants to the basics of hand building in a fun and interactive way. Let your pieces dry & then return after 2 weeks for glazing them (coloring)",
+
+    "price": "BHD 24",
+    "duration": "1 hr & 30 min",
+    "age": "7-12"
+  },
+
+  {
+    "images": [
+      "card1_1.jpg",
+      "card4_2.jpg",
+      "card4_3.jpg",
+      "card4_4.jpg",
+      "card4_5.jpg"
+    ],
+    "title": "Painting  - class",
+    "description": "unlock your inner artist, express you creativity as you paint your own pottery piece, where you can choose any ready-made pottery piece (vas, jar, tray,mubkhar,etc) and let your inspiration flow.",
+
+    "price": "(5-10 bd)",
+    "duration": "1 hr & 30 min",
+    "age": "12+"
+  },
+  
+  {
+    "images": [
+      "card1_1.jpg",
+      "card5_2.jpg",
+      "card5_3.jpg",
+      "card5_4.jpg",
+      "card5_5.jpg"
+    ],
+    "title": "Private Workshop Package",
+    "price": "28-35 BD",
+    "packages": ["7-8 person 28 BD each", "6-5 person 35 bd each"],
+    "description": "Whether you're looking to celebrate a milestone birthday, an anniversary, or simply a treat with your friends, celebrate your special event by joining our hand-built pottery workshop. Where you will be guided to design and create your own unique, handmade ceramic piece. This intimate workshop provides a fun and creative way to mark your occasion.",
+    "duration": "open",
+    "age": "Any"
+  }
+]

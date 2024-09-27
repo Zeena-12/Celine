@@ -1,0 +1,64 @@
+<body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="celine.svg" />
+        </div>
+        <div class="menu">
+          <a href="#contact">CONTACT</a>
+          <a href="#about">ABOUT</a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="slider-container-outer">
+          <p class="title" id="itemTitle"></p>
+          <div class="slider-container">
+            <div class="slider" id="slider"></div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="price" id="itemPrice"></div>
+          <div class="time">
+            <p>Duration</p>
+            <p id="itemDuration"></p>
+          </div>
+          <div class="description">
+            <p id="itemDescription"></p>
+          </div>
+          <button class="dm-btn">DM for booking</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const itemIndex = params.get('item');
+
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const selectedCard = data[itemIndex];
+
+                // Set the title and other details
+                document.getElementById('itemTitle').innerText = selectedCard.title;
+                document.getElementById('itemPrice').innerText = selectedCard.price;
+                document.getElementById('itemDuration').innerText = selectedCard.duration;
+                document.getElementById('itemDescription').innerText = selectedCard.description;
+
+                // Set the images in the slider
+                const slider = document.getElementById('slider');
+                selectedCard.images.forEach(image => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = image;
+                    imgElement.alt = selectedCard.title;
+                    imgElement.style.width = '100%'; // Adjust as necessary
+                    slider.appendChild(imgElement);
+                });
+            });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
