@@ -206,6 +206,9 @@
             <p id="itemDescription"></p>
           </div>
           <ul id="packageList"></ul>
+          <div style="border:1px solid red;">
+          <p id="itemIndlude"></p>  
+          </div>
           <button class="dm-btn">DM for booking</button>
         </div>
       </div>
@@ -232,6 +235,10 @@
               }
               if (selectedCard.description) {
                   document.getElementById('itemDescription').innerText = selectedCard.description;
+              }
+
+              if (selectedCard.include) {
+                  document.getElementById('itemIndlude').innerText = selectedCard.description;
               }
   
               // Handle packages if they exist
